@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ITunes</title>
+</head>
+<body>
+<form>
+Searchbar: <input type="text" placeholder="Artist,Songs, Genres" />
+
+</form>
+<h1>Artists: </h1>
+<ul th:each="cust: ${artist}">
+    <li th:text="${cust.getName()}"></li>
+</ul>
+
+<h1>Songs:</h1>
+<ul th:each="cust: ${songs}">
+    <li th:text="${cust.getSongName()}"></li>
+</ul>
+
+<h1>Genres:</h1>
+<ul th:each="cust: ${genres}">
+    <li th:text="${cust.getGenreName()}"></li>
+</ul>
+</body>
+</html>
